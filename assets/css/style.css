@@ -1,0 +1,839 @@
+body {
+    font-family: "Helvetica", Georgia, Arial, sans-serif;
+    /* https://stackoverflow.com/questions/19982651/why-does-bootstrap-set-the-line-height-property-to-1-428571429 */
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #e9ebee;
+    display: flex;
+    flex-direction: column;
+}
+
+/* globals */
+header {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../../upload/panda.jpg);
+}
+
+.main-container {    
+    margin: 0 auto;
+    min-height: 600px;
+    width: 80%;
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;    
+    padding: 10px 0;
+}
+
+input[type=submit] {
+    border: none;
+}
+
+form input::-webkit-input-placeholder {
+  color: #999;
+}
+
+form input:focus::-webkit-input-placeholder {
+  color: lightgrey;
+}
+
+.col-lg-4 {
+    align-self: center;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.friendship {
+    background: #fff;
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.friendship ul {
+    margin: 0;
+}
+
+.friendship ul li {
+    padding: 10px 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+ul {    
+    list-style-type: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+input:focus,
+input:hover {
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-color: #ccc;
+}
+
+.btn-register {
+    outline: none;
+    font-size: 14px;
+    height: auto;
+    font-weight: normal;
+    padding: 15px 0;
+    text-transform: uppercase;
+    width: 100%;    
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#login, #register-submit {
+    width: 50%;
+    align-self: center;
+}
+
+/* nav */
+.topnav {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: #33691e;
+}
+
+.topnav form > input[type=text] {
+    padding: 6px;
+    border: none;
+}
+  
+.topnav .search-container button {
+    float: right;
+    padding: 6px;
+    margin-right: 16px;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+}
+  
+.topnav .search-container button:hover {
+    background: #ccc;
+}
+
+.topnav ul {
+    width: 80%;
+    margin: 0 auto;
+    list-style-type: none;
+    padding: 0;
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #33691e;
+    align-items: center;
+}
+
+.dropbtn {
+    background-color: #33691e;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: darkgreen;
+    color: #fff;
+}
+
+.searchbar {
+    padding-right: 16px;
+    align-items: center;
+    display: flex;
+}
+
+input[type=search] {
+    height: 33px;
+    border-radius: 4px;
+    border: none;
+    margin-right: 10px;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+    color: #fff;
+    background-color: green;
+    border-color: green;
+}
+
+/* setup.php */
+.setup {
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.setup p {
+    max-width: 150px;
+    text-align: center;
+}
+
+.setup-head {
+    padding: 10px;
+}
+
+.setup-head>h5 {
+    font-size: 18px;
+    color: darkgreen;
+}
+
+.setup-button {
+    padding: 20px 0;
+}
+
+#setup {
+    background-color: #1cb94e;
+    border-color: #1cb94a;
+    color: #fff;
+}
+
+#setup:hover,
+#setup:focus {
+  color: #fff;
+  background-color: #1ca347;
+  border-color: #1ca347;
+}
+
+/* register.php */ 
+.form {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.register-form {
+    padding: 10px;
+    min-width: 450px;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.link {
+    font-weight: bold;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+
+.link>a {    
+  color: #666;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.link>a.active {    
+  color: #029f5b;
+  font-size: 18px;
+  transition: all ease .3s;
+
+}
+
+hr {
+    margin: 20px 0;
+    clear: both;
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(
+      left,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0)
+    );
+    background-image: -moz-linear-gradient(
+      left,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0)
+    );
+    background-image: -ms-linear-gradient(
+      left,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0)
+    );
+    background-image: -o-linear-gradient(
+      left,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0)
+    );
+}
+
+.form-body {
+    padding: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group a {
+    align-self: center;
+    color: green;
+}
+.form-group a:hover {
+    color: darkgreen;
+}
+
+.form-group>label, .form-group>span {
+    align-self: center;
+}
+
+.form-group>label {
+    color: darkgreen;
+}
+
+.form-group > input:not([type=submit]) {    
+  font-size: 16px;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  padding: 6px 12px;
+}
+
+.form-group > input:not([type="submit"]):not([type="file"]) {
+    height: 45px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+#register-submit {
+    background-color: #1cb94e;
+  border-color: #1cb94a;
+}
+
+#register-submit:hover, 
+#register-submit:focus {
+  background-color: #1ca347;
+  border-color: #1ca347;
+}
+
+/* login.php */
+.login-form {
+    padding: 10px;
+    min-width: 400px;
+    margin: 0 5px;
+}
+
+#login {
+    border-color: #59b2e6;
+  background-color: #59b2e0;
+}
+
+#login:focus,
+#login:hover {
+  color: #fff;
+  background-color: #53a3cd;
+  border-color: #53a3cd;
+}
+
+.test {
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.test h5 {
+    font-size: 16px;
+    font-weight: bold;
+    color: darkgreen;
+    align-self: center;
+}
+
+.test p {
+    font-weight: bold;
+    align-self: center;
+}
+
+/* PROFILE TEMPLATE */
+
+/* user infos */
+.aside {
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;   
+    position: sticky;
+    top: 60px;
+    max-width: 300px;
+}
+
+.user-infos {
+    padding: 10px;
+}
+.name {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.name h5 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.img-container {    
+  max-width: 200px;
+  margin: auto;
+}
+
+.ratio {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.col {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.col h5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.col a {    
+    padding-top: 5px;
+}
+
+.requests {
+    padding: 10px;
+    margin: 10px 0;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.requests a {
+    display: block;
+}
+
+.aside, .main-content, .timeline {
+    margin: 0 5px;
+}
+
+.timeline, .user-infos {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+/* user wall */
+.wall {
+    max-width: 590px;
+}
+
+.wall > h4 {
+    max-width: 590px;
+    text-align: center;
+    background: white;
+    padding: 10px 0;
+}
+
+.main-content {
+    background: transparent;
+    flex: 2;
+}
+
+/* "write a post" form */
+
+.write-post{
+    width: 590px;
+    overflow: auto;
+    padding: 10px;
+    background-color: #33691e;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.form-post input:not([type="file"]) {  
+    width: 100%;  
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+
+}
+
+.post {
+    width: 590px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: #fff;
+}
+
+.post-avatar {
+    width: 50px;
+    float: left;
+}
+
+.form-post {
+    width: 88%;
+    margin-left: 9px;    
+    display: inline-block;
+    margin-top: 6px;
+}
+
+.media {
+    clear: both;
+    padding-top: 10px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.media > div {
+    text-align: center;
+}
+
+.media > div > input[name="video"] {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.media label {
+    color: #fff;
+}
+
+.post > hr {
+    margin: 15px 0;
+}
+
+.post-heading {
+    padding: 10px 10px 0 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.post-avatar {
+    flex: 2;
+}
+
+.user-meta {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 19;
+}
+
+.profile-link {    
+    margin-top: 0px;
+    font-size: 17px;    
+}
+
+.post-link {
+    font-size: 13px;
+    color: darkgrey;
+}
+
+.post-link:hover {    
+    color: darkgrey;
+}
+
+.profile-link:hover, 
+.post-link:hover  {
+    text-decoration: underline;
+}
+
+
+.options-wrapper {
+    position: absolute;
+    right: 488px;
+}
+
+.options-wrapper button {    
+    background-color: transparent;
+    border: transparent;
+    color: #8f8f8f;
+}
+
+.options-wrapper button:focus {
+    outline: none;
+}
+
+.options-wrapper:hover button {
+    color: darkslategrey;
+}
+
+#options {    
+    width: 60px;
+}
+
+.options {  
+    background-color: #fff;
+    border-color: #ccc;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2); 
+    display: none;
+    flex-direction: column;
+    position: relative;
+    top: 20px;
+    right: 5px;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.options-container {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.options-container a:first-child {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2px;
+}
+
+.options-container a:hover {
+    background: darkgreen;
+    color: white;
+}
+
+
+/* actual posts on the wall */
+.post-content {
+    margin: 0 15px;
+    padding: 10px 0;
+}
+
+.post-content hr {
+    margin: 0;
+}
+
+.content {
+    padding: 0 10px;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+
+.media-content {
+    display: flex;
+    width: auto;
+    background: transparent;
+    max-height: 400px;
+}
+
+.media-content iframe {
+    width: auto;
+    /* height: 400px; */
+    margin: 0 auto;
+    border: none;
+}
+
+.media-content > img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* comments */
+#comment-form {
+    padding: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#comment-form form {
+    display: flex;
+    flex-direction: row;
+}
+
+#comment-form input[name="content"] {
+    height: 33px;
+    align-self: center;
+    width: 90%;
+    margin-left: 10px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    border-radius: 20px;
+    background-color: #e9ebee;
+    color: #1d2129;
+    overflow: visible;
+    word-wrap: break-word;
+    font-size: 13px;
+    border-color: rgb(204, 208, 213);
+    border: 1px solid rgb(204, 208, 213);
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-indent: 10px;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 10px;
+    padding: 10px 0;
+}
+
+.btn-comment-wrap {
+    cursor: pointer;
+}
+
+.comment .profile-link {
+    margin-right: 5px;
+}
+
+.comment .post-link {
+    margin-left: 5px;
+}
+
+.comment-content {
+    flex: 14;
+}
+
+.comment-avatar {
+    flex: 1;
+    width: 40px;
+}
+
+.comment-wrapper {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.comment-wrapper a {
+    padding: 10px 0;
+}
+
+.comment-wrapper a:hover {
+    text-decoration: underline;
+}
+
+.body-comment {
+    margin-left: 5px;
+    margin-right: 20px;
+    padding: 5px 10px;
+    background-color: #eff1f3;
+    border-radius: 20px;
+}
+
+/* timeline */
+
+.timeline {
+    flex: 1;
+}
+
+.timeline h5 {
+    font-size: 16px;
+    text-align: center;
+}
+
+.timeline ul {
+    padding: 0 10px;
+}
+
+.timeline ul li {
+    padding: 5px 0;
+}
+
+.timeline ul li a {
+    color: #337ab7;
+}
+
+.timeline ul li a:hover {
+    color: #23527c;
+}
+/* logs */
+
+.jumbotron {
+    margin: 10px;
+    border-radius: 4px;
+    background: #fff;
+}
