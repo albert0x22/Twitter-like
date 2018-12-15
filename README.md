@@ -9,7 +9,4 @@ These variables are located in /setup.php and /includes/db-connect.php.
 When the database is set up you can register with your test infos or connect directly to the test account 
 to see the application working.
 
-/process folder contains the logics for the data processing (forms -register, posts, comments...- and relationships
-- add friend, block user... -).
-
-/includes/functions.php contains all the functions.
+/process folder contains the logics for the data processing (forms -register, posts, comments...- and relationships - add friend, block user... -).
